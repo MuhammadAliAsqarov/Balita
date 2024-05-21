@@ -6,8 +6,8 @@ from django.core.paginator import Paginator
 from .validators import validate_contact_form
 import requests
 
-BOT_TOKEN = '7057112281:AAF-6Ok6aEuOz52ys6HbdaswCU27yzASInI'
-CHAT_ID = '330165400'
+BOT_TOKEN =' '
+CHAT_ID = ' '
 
 
 def home_view(request):
