@@ -1,6 +1,6 @@
 import os
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Category, Post, Comment, Contact, Tag
 from django.core.paginator import Paginator
 from .validators import validate_contact_form
@@ -144,7 +144,7 @@ def blog_detail_view(request, pk):
     top_posts_main = Post.objects.filter(is_published=True).order_by('-views')[:3]
     latest_posts = Post.objects.filter(is_published=True).order_by('-created_at')[:3]
     top_posts = Post.objects.filter(is_published=True).order_by('-views')[2:8]
-    post = Post.objects.filter(id=pk).first()
+    post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save(update_fields=['views'])
     comments = Comment.objects.filter(post_id=pk)
@@ -178,7 +178,7 @@ def tag_posts_view(request, pk):
     tags = Tag.objects.all()
     latest_posts = Post.objects.filter(is_published=True).order_by('-created_at')[:3]
     categories = Category.objects.all()
-    tag = Tag.objects.get(pk=pk)
+    tag = get_object_or_404(Tag, pk=pk)
     newest_posts = Post.objects.filter(is_published=True).order_by('-created_at')[:6]
 
     tag_posts = Post.objects.filter(tags=tag)
