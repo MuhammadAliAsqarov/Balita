@@ -19,7 +19,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=150)
     content = RichTextField()
-    image = models.ImageField(upload_to='posts/')
+    image = models.ImageField(upload_to='posts/',default='posts/img_1.jpg')
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag, blank=True)
