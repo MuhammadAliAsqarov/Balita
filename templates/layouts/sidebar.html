@@ -26,7 +26,7 @@
                         {% for post in top_posts %}
                         <ul>
                             <li>
-                                <a href="/blog/{{ post.id }}/">
+                                <a href="/balita/blog/{{ post.id }}/">
                                     <img src="{{ post.image.url }}" alt="Image placeholder" class="mr-4">
                                     <div class="text">
                                         <h4>{{ post.title }}</h4>
@@ -45,7 +45,7 @@
                     <h3 class="heading">Categories</h3>
                     <ul class="categories">
                         {% for category in categories %}
-                        <li><a href="/categories/?cat={{ category.id }}">{{ category.name }} <span>({{ category.post_set.count }})</span></a>
+                        <li><a href="/balita/categories/?cat={{ category.id }}/">{{ category.name }} <span>({{ category.post_set.count }})</span></a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -55,7 +55,7 @@
                     <h3 class="heading">Tags</h3>
                     {% for tag in tags %}
                     <ul class="tags">
-                        <li><a href="/tag/{{ tag.id }}/">{{ tag.name }}</a></li>
+                        <li><a href="/balita/tag/{{ tag.id }}/">{{ tag.name }}</a></li>
                         {% endfor %}
                 </div>
             </div>
