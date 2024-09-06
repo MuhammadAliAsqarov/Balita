@@ -20,11 +20,11 @@
                     <div class="pt-5">
                         <p>Categories:
                             {% for category in post.category.all %}
-                            <a href="/balita/tag/{{ tag.id }}/">{{ category.name }}</a>{% if not forloop.last %},clea {% endif %}
+                            <a href="/tag/{{ tag.id }}/">{{ category.name }}</a>{% if not forloop.last %},clea {% endif %}
                             {% endfor %}
                             Tags:
                             {% for tag in post.tags.all %}
-                            <a href="/balita/tag/{{ tag.id }}/">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
+                            <a href="/tag/{{ tag.id }}/">{{ tag.name }}</a>{% if not forloop.last %}, {% endif %}
                             {% endfor %}
                         </p>
                     </div>
@@ -82,7 +82,7 @@
         <div class="row">
             {% for post in top_posts_main %}
             <div class="col-md-6 col-lg-4">
-                <a href="/balita/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-md"
+                <a href="/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-md"
                    style="background-image: url({{ post.image.url }}); ">
                     <div class="text">
                         <div class="post-meta">

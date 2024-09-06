@@ -8,7 +8,7 @@
                     <div class="owl-carousel owl-theme home-slider">
                         {% for post in top_posts_main %}
                             <div>
-                                <a href="/balita/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-lg"
+                                <a href="/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-lg"
                                    style="background-image: url({{ post.image.url }});">
                                     <div class="text half-to-full">
                                         <div class="post-meta">
@@ -31,7 +31,7 @@
             <div class="row">
                 {% for post in top_posts_main %}
                     <div class="col-md-6 col-lg-4">
-                        <a href="/balita/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-md"
+                        <a href="/blog/{{ post.id }}/" class="a-block d-flex align-items-center height-md"
                            style="background-image: url({{ post.image.url }}); ">
                             <div class="text">
                                 <div class="post-meta">
@@ -62,7 +62,7 @@
                     <div class="row">
                         {% for post in posts %}
                             <div class="col-md-6">
-                                <a href="/balita/blog/{{ post.id }}/" class="blog-entry element-animate"
+                                <a href="/blog/{{ post.id }}/" class="blog-entry element-animate"
                                    data-animate-effect="fadeIn">
                                     <img src="{{ post.image.url }}" alt="Image placeholder">
                                     <div class="blog-content-body">
@@ -108,7 +108,7 @@
                         {% for post in newest_posts %}
                             <div class="col-md-12">
                                 <div class="post-entry-horzontal">
-                                    <a href="/balita/blog/{{ post.id }}/">
+                                    <a href="/blog/{{ post.id }}/">
                                         <div class="image element-animate" data-animate-effect="fadeIn"
                                              style="background-image: url({{ post.image.url }});"></div>
                                         <span class="text">
