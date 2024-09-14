@@ -12,7 +12,7 @@ B = SingleListNode(2)
 C = SingleListNode(3)
 D = SingleListNode(4)
 Head.next = B
-B.next =
+B.next = C
 C.next = D
 curr = Head
 while curr:
