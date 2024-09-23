@@ -13,5 +13,3 @@ def sqrt(x: int) -> int:
             first = mid + 1
     return last
 
-
-print(sqrt(121))
