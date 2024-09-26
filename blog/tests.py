@@ -10,6 +10,3 @@ def sqrt(num):
         else:
             first = mid + 1
     return last
-
-
-print(sqrt(36))
