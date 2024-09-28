@@ -1,12 +1,16 @@
-def sqrt(num):
-    first = 0
-    last = num
-    while first <= last:
-        mid = first + (last - first) // 2
-        if mid == num // mid:
-            return mid
-        elif mid > num // mid:
-            last = mid - 1
-        else:
-            first = mid + 1
-    return lastdas
+class Sqrt:
+    def sqrt(self, number):
+        first = 0
+        last = number
+        while first <= last:
+            middle = first + (last - first) // 2
+            if middle == number // middle:
+                return middle
+            elif middle > number // middle:
+                last = middle - 1
+            else:
+                first = middle + 1
+        return last
+
+
+print(Sqrt().sqrt(5))
