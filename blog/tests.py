@@ -12,5 +12,5 @@ class Sqrt:
                 first = middle + 1
         return last
 
-jdfgj
+
 print(Sqrt().sqrt(5))
